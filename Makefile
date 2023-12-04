@@ -10,4 +10,4 @@ docker.stop:
 	docker stop docker-wault
 
 go.run:
-	go run app/main.go
+	go run wault

@@ -1,9 +1,10 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Home</title>
-    </head>
-    <body>
-        <h1>Hello, {{.}}!</h1>
-    </body>
-</html>
+<DOCTYPE html>
+{{ define "layout.html" }}
+{{ block "title" . }}
+<title> Home </title>
+{{ end }}
+
+{{ block "content" . }}
+<h1> Hello! </h1>
+{{ end }}
+{{ end }}

@@ -17,12 +17,12 @@ func main() {
 }
 
 func RouteHome(res http.ResponseWriter, req *http.Request) {
-	tmpl, err := template.ParseFiles("templates/home.html")
+	tmpl, err := template.ParseFiles("templates/layout.html", "templates/home.html")
 	if err != nil {
 		http.Error(res, err.Error(), http.StatusInternalServerError)
 		return
 	}
-	err = tmpl.Execute(res, "World!")
+	err = tmpl.Execute(res, nil)
 	if err != nil {
 		http.Error(res, err.Error(), http.StatusInternalServerError)
 		return
